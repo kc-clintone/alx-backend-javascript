@@ -1,6 +1,6 @@
 /* eslint-disable radix */
 export default function iterateThroughObject(reportWithIterator) {
-  let output = '';
+  let data = '';
 
   for (const [index, item] of Object.entries(reportWithIterator)) {
     data += `${item}`;
