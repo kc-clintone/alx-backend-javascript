@@ -5,8 +5,7 @@
  * @author - Clinton Otieno, www.github.com/kc-clintone
  * @param {string} message - The message to be printed to the console.
  */
-
-function displayMessage(message) {
+const displayMessage = (message) => {
     console.log(message);
 }
 
