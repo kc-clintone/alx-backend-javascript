@@ -14,7 +14,7 @@ const fs = require('fs').promises;
  */
 function countStudents(path) {
   return fs
-    .readFile(path, 'utf8"l')
+    .readFile(path, 'utf8')
     .then((data) => {
       const lines = data
         .trim()
