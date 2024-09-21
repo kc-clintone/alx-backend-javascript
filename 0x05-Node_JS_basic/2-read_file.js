@@ -19,7 +19,7 @@ function countStudents(path) {
       .split('\n')
       .filter((line) => line !== '');
 
-    const header = lines[0].split(','); // eslint-disable-line no-unused-vars
+    const header = lines[0].split(',');
     const studentData = lines.slice(1);
 
     if (studentData.length === 0) {
@@ -32,9 +32,7 @@ function countStudents(path) {
     const fieldGroups = {};
 
     studentData.forEach((line) => {
-      /*eslint-disable-line no-unused-vars*/
       const [firstname, lastname, age, field] = line.split(',');
-      /*eslint-disable-line no-unused-vars*/
       if (field in fieldGroups) {
         fieldGroups[field].push(firstname);
       } else {

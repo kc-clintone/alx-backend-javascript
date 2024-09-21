@@ -33,5 +33,10 @@ module.exports = {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
     }
-  ]
+  ],
+  {
+    "rules": {
+      "no-unused-vars": ["error", { "args": "none" }]
+    }
+  }
 };
