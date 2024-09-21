@@ -9,8 +9,6 @@ export function readDatabase(filePath) {
         const fields = {};
         const lines = data.trim().split('\n');
         const headers = lines[0].split(',');
-
-        // Ensure that we have the expected fields
         const fieldIndex = headers.indexOf('field');
         const nameIndex = headers.indexOf('firstname');
 
@@ -37,4 +35,3 @@ export function readDatabase(filePath) {
     });
   });
 }
-
