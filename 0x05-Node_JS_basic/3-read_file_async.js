@@ -1,4 +1,4 @@
-const fs = require("fs").promises;
+const fs = require('fs').promises;
 
 /**
  * countStudents
@@ -14,18 +14,18 @@ const fs = require("fs").promises;
  */
 function countStudents(path) {
   return fs
-    .readFile(path, "utf8")
+    .readFile(path, 'utf8"l')
     .then((data) => {
       const lines = data
         .trim()
-        .split("\n")
-        .filter((line) => line !== "");
+        .split('\n')
+        .filter((line) => line !== '');
 
-      const header = lines[0].split(",");
+      const header = lines[0].split(',');
       const studentData = lines.slice(1);
 
       if (studentData.length === 0) {
-        console.log("No students found in the database.");
+        console.log('No students found in the database.');
         return;
       }
 
@@ -34,7 +34,7 @@ function countStudents(path) {
       const fieldGroups = {};
 
       studentData.forEach((line) => {
-        const [firstname, lastname, age, field] = line.split(",");
+        const [firstname, lastname, age, field] = line.split(',');
 
         if (field in fieldGroups) {
           fieldGroups[field].push(firstname);
@@ -45,12 +45,12 @@ function countStudents(path) {
 
       for (const [field, students] of Object.entries(fieldGroups)) {
         console.log(
-          `Number of students in ${field}: ${students.length}. List: ${students.join(", ")}`,
+          `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`,
         );
       }
     })
     .catch(() => {
-      throw new Error("Cannot load the database");
+      throw new Error('Cannot load the database');
     });
 }
 
