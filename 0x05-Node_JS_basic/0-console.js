@@ -6,7 +6,7 @@
  * @param {string} message - The message to be printed to the console.
  */
 const displayMessage = (message) => {
-    console.log(message);
-}
+  console.log(message);
+};
 
 module.exports = displayMessage;
