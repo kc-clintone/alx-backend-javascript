@@ -96,7 +96,7 @@ const handleServerRoutes = [
           res.setHeader('Content-Type', 'text/plain');
           res.setHeader('Content-Length', myResponse.length);
           res.statusCode = 200;
-          res.write(Buffer.from(responseText));
+          res.write(Buffer.from(myResponse));
         });
     },
   },
