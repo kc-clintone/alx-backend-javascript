@@ -1,1 +1,1 @@
-# Backend Javascript scripts
+# Backend Javascript practice
